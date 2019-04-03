@@ -65,7 +65,7 @@ h1 {
 .ft-verfied {
 	grid-column: 2 / span 1;
 	grid-row: 1 / span 1;
-	margin-left: 20px;
+	margin-right: 30px;
 	width: 40%;
 }
 
