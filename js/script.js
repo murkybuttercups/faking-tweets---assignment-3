@@ -2,11 +2,7 @@ window.onload = init;
 
 function init() {
 
-    
-
-
-
-	var xhr = new XMLHttpRequest(); 
+    var xhr = new XMLHttpRequest(); 
 
     xhr.open('GET', 'get_tweets.php', true); 
 
@@ -14,7 +10,7 @@ function init() {
 
     xhr.onload = function() {
 
-    	if(xhr.status == 200){
+        if(xhr.status == 200){
             var data = JSON.parse(xhr.responseText);
             console.log(data);
             tweets = data.statuses; 
@@ -26,12 +22,10 @@ function init() {
                 faketweet += ""
            document.getElementById("ft-tweetcontent").innerText = faketweet;
           } 
-}
-          else {
+        } else {
                 document.getElementById("ft-tweetcontent").innerHTML = xhr.responseText;
                 console.log(xhr);
         }
-
     }
 }
 

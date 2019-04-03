@@ -12,7 +12,7 @@
 
 	// Choose URL and Request Method
 	$url = "https://api.twitter.com/1.1/search/tweets.json";
-	$getfield = '?q="lmao"&lang=en&result_type=popular&count=1'; 
+	$getfield = '?q="#fakenews"&lang=en&result_type=popular&count=1'; 
 	$requestMethod = "GET";
 	
 	//Perform the request!
