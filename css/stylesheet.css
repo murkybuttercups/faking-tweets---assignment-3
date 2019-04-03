@@ -11,8 +11,7 @@ h1 {
 	margin:0px;
 }
 
-/*help with grid extending to fill screen: https://stackoverflow.com/questions/43747185/force-css-grid-container-to-fill-full-screen-of-device*/
-.template {
+body {
 	height: 100%;
 	display: grid;
 	grid-template-columns: repeat(6, 1fr);
@@ -153,3 +152,8 @@ h1 {
 	grid-row: 5 / span 1;
 	background-color: #0084b4;
 }
+
+ .ft-hover:hover {
+ 	transform: scale(1.05);
+ 	transition-duration: 0.3s;
+ }

@@ -35,7 +35,7 @@ function init() {
     }
 }
 
-//donald trump image source: https://twitter.com/realDonaldTrump
+        //donald trump image source: https://twitter.com/realDonaldTrump
         document.getElementById("ft-dtrump").onclick = function() {
             document.getElementById("ft-profilepic").src = "images/ft-trumpprofilepic.jpg";
             document.getElementById("ft-header").innerHTML = "Donald J. Trump";
