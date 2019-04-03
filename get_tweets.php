@@ -11,8 +11,8 @@
 	);
 
 	// Choose URL and Request Method
-	$url = "https://api.twitter.com/1.1/search/statuses/mentions_timeline.json";
-	$getfield = '?q=screen_name=chrisannclark&count=20'; 
+	$url = "https://api.twitter.com/1.1/search/tweets.json";
+	$getfield = '?q="lmao"&lang=en&result_type=popular&count=1'; 
 	$requestMethod = "GET";
 	
 	//Perform the request!

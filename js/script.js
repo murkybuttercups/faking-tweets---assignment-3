@@ -2,7 +2,40 @@ window.onload = init;
 
 function init() {
 
-        //donald trump image source: https://twitter.com/realDonaldTrump
+    
+
+
+
+	var xhr = new XMLHttpRequest(); 
+
+    xhr.open('GET', 'get_tweets.php', true); 
+
+    xhr.send(null);
+
+    xhr.onload = function() {
+
+    	if(xhr.status == 200){
+            var data = JSON.parse(xhr.responseText);
+            console.log(data);
+            tweets = data.statuses; 
+            document.getElementById("ft-generate").onclick = function() {
+            var faketweet = "";
+                tweets.forEach(function(tweet) {
+                    faketweet += tweet.text;
+                });
+                faketweet += ""
+           document.getElementById("ft-tweetcontent").innerText = faketweet;
+          } 
+}
+          else {
+                document.getElementById("ft-tweetcontent").innerHTML = xhr.responseText;
+                console.log(xhr);
+        }
+
+    }
+}
+
+//donald trump image source: https://twitter.com/realDonaldTrump
         document.getElementById("ft-dtrump").onclick = function() {
             document.getElementById("ft-profilepic").src = "images/ft-trumpprofilepic.jpg";
             document.getElementById("ft-header").innerHTML = "Donald J. Trump";
@@ -28,23 +61,6 @@ function init() {
             document.getElementById("ft-profilepic").src = "images/ft-wendysprofilepic.jpg";
             document.getElementById("ft-header").innerHTML = "Wendy's";
             document.getElementById("ft-handle").innerHTML = "@Wendys";
-        }
 
-
-
-	var xhr = new XMLHttpRequest(); 
-
-    xhr.open('GET', 'get_tweets.php', true); 
-
-    xhr.send(null);
-
-    xhr.onload = function() {
-
-    	if(xhr.status == 200){
-            var tweets = JSON.parse(xhr.responseText);
-            console.log(tweets);
-            }
-}
-
-
+            getTweets();
 }
