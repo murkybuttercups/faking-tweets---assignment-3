@@ -1,0 +1,169 @@
+
+*{
+	box-sizing: border-box;
+}
+
+img {
+	width: 100%;
+}
+
+h1 {
+	margin:0px;
+}
+
+body {
+	height: 100%;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-rows: repeat(6, 1fr);
+	grid-gap: 20px;
+	grid-row-gap: 22.5px;
+	/*width: 100vw;*/
+  	height: 100vh;
+  	margin-top: 100px;
+  	font-family: Helvetica;
+	background-color: #c0deed;
+}
+
+.ft-templatearea {
+	grid-column: 2 / span 4;
+	grid-row: 1 / span 3;
+	background-color: white;
+	border-radius: 8px;
+}
+
+.ft-template {
+	display: grid;
+	grid-template-columns: 1fr 2fr 1fr 1fr 2fr 1fr;
+	grid-template-rows: 1fr 2fr 1fr;
+	grid-gap: 20px;
+	height:100%;
+	padding: 30px;
+}
+
+.ft-profilepic {
+	border-radius: 50%;
+	grid-column: 1 / span 1;
+	grid-row: 1 / span 1;
+}
+
+.ft-headerinfo {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+
+.ft-header {
+	grid-column: 1 / span 2;
+	grid-row: 1 / span 1;
+	font-weight: bold;
+	font-size: 	1.5em;
+	height: 40%;
+}
+
+.ft-verfied {
+	grid-column: 2 / span 1;
+	grid-row: 1 / span 1;
+	margin-right: 30px;
+	width: 40%;
+}
+
+.ft-handle {
+	grid-column: 1 / span 2;
+	grid-row: 2 / span 1;
+	font-size: 1.125em;
+	font-weight: lighter;
+	color: #AAB8C2;
+	margin: 0px;
+	
+}
+
+.ft-follow {
+	grid-column: 5 / span 1;
+	grid-row: 1 / span 1;
+	margin: 20px;
+	border: 2px solid #00aced;
+	border-radius: 100px;
+	background-color: white;
+	font-weight: bold;
+	font-size:1.5em;
+	color: #00aced;
+}
+
+.ft-logicalor {
+	grid-column: 6 / span 1;
+	grid-row: 1 / span 1;
+	font-size: 2.1em;
+	color: #AAB8C2;
+	text-align: center;
+}
+
+.ft-tweetcontent {
+	grid-column: 1 / span 6;
+	grid-row: 2 / span 1;
+	font-weight: normal;
+	font-size: 1.5em;
+	margin: 0px;
+}
+
+.ft-timedate {
+	grid-column: 1 / span 2;
+	grid-row: 3 / span 1;
+	font-size: 	1.125em;
+	font-weight: lighter;
+	color: #AAB8C2;
+	margin: 0px;
+}
+
+.ft-dtrump {
+	border-radius: 50%;
+	grid-column: 2 / span 1;
+	grid-row: 4 / span 1;
+}
+
+.ft-agrande {
+	border-radius: 50%;
+	grid-column: 3 / span 1;
+	grid-row: 4 / span 1;
+}
+
+.ft-jkrowling {
+	border-radius: 50%;
+	grid-column: 4 / span 1;
+	grid-row: 4 / span 1;
+}
+
+.ft-wendys {
+	border-radius: 50%;
+	grid-column: 5 / span 1;
+	grid-row: 4 / span 1;
+}
+
+.ft-generate {
+	font-weight: bold;
+	color: white;
+	font-size: 2.2em;
+	padding: 5px;
+	margin-left: 110px;
+	margin-right: 110px;
+	border-radius: 100px;
+	border-style: none;
+	grid-column: 3 / span 2;
+	grid-row: 5 / span 1;
+	background-color: #0084b4;
+}
+
+ .ft-hover:hover {
+ 	transform: scale(1.05);
+ 	transition-duration: 0.3s;
+ }
+
+ @media only screen and (max-width: 1300px) {
+ 		body {
+ 			font-size: 80%;
+ 		}
+ 		.ft-generate {
+ 			/*font-size: 100%;*/
+ 			margin:0px;
+ 		}
+ }
